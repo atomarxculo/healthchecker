@@ -1,0 +1,21 @@
+global:
+  timeout: 10s  # Timeout para todos
+
+services:
+  - name: google
+    type: http
+    target: https://google.com
+    method: GET
+    
+  - name: local-api
+    type: http
+    target: http://localhost:8080/health
+    timeout: 2s  # Timeout específico para este servicio
+    
+  - name: database
+    type: tcp
+    target: localhost:5432
+    
+  - name: redis
+    type: tcp
+    target: localhost:6379
