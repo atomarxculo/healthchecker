@@ -30,7 +30,7 @@ func (t *TCPChecker) Check(ctx context.Context) *Result  {
 	start := time.Now()
 	result := &Result{
 		Name: t.name,
-		Type: "http",
+		Type: "tcp",
 		Target: t.host,
 		Healthy: false,
 	}
